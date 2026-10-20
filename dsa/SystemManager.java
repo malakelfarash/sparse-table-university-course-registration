@@ -9,7 +9,6 @@ public class SystemManager {
     int lastStudentID;
     int lastCourseID;
 
-    //for bonus
     Stack<Action> undoStack = new Stack<>();
     Stack<Action> redoStack = new Stack<>();
 
@@ -36,7 +35,7 @@ public class SystemManager {
         while (currentCourse != null) {
             CourseList.CourseNode courseNode = courseList.findCourse(currentCourse.courseid);
             if (courseNode != null) {
-                courseNode.removeStudentFromCourse(id);  // لازم تنفذ دي الوظيفة جوه CourseNode
+                courseNode.removeStudentFromCourse(id);
             }
             currentCourse = currentCourse.next;
         }
@@ -138,29 +137,29 @@ public class SystemManager {
 
         System.out.println("Student " + studentID + " has been enrolled in course " + courseID + " successfully.");
 
-        //save in undo stack
+        // Save in undo stack
         undoStack.push(new Action("enroll", studentID, courseID));
     }
 
     public void removeEnrollment(int studentID, int courseID) {
 
-        //find the student
+        // Find the student
         StudentList.StudentNode student = studentList.findStudent(studentID);
         if (student == null) {
             System.out.println("Student with ID " + studentID + " not found.");
             return;
         }
-        //find the course
+        // Find the course
         CourseList.CourseNode course = courseList.findCourse(courseID);
         if (course == null) {
             System.out.println("Course with ID " + courseID + " not found.");
             return;
         }
 
-        // remove student from coourse
+        // Remove student from coourse
         boolean studentRemovedFromCourse = course.removeStudentFromCourse(studentID);
 
-        //remove course from student course list
+        // Remove course from student course list
         boolean courseRemovedFromStudent = student.removeCourseFromStudent(courseID);
 
         if (studentRemovedFromCourse && courseRemovedFromStudent) {
@@ -171,7 +170,7 @@ public class SystemManager {
         }
     }
 
-    //listCourse By student id
+    // listCourse By student id
     public void listCourseByStudent(int studentId) {
         StudentList.StudentNode student = studentList.findStudent(studentId);
         if (student == null) {
@@ -190,7 +189,7 @@ public class SystemManager {
         }
     }
 
-    //listStudent By course id
+    // listStudent By course id
     public void listStudentsByCourse(int courseID) {
         CourseList.CourseNode course = courseList.findCourse(courseID);
 
@@ -213,7 +212,7 @@ public class SystemManager {
         }
     }
 
-    //is the course full
+    // is the course full
     public boolean isFullCourse(int courseid) {
         CourseList.CourseNode course = courseList.findCourse(courseid);
         if (course == null) {
@@ -235,7 +234,7 @@ public class SystemManager {
         }
     }
 
-    //is student normal
+    // is student normal
     public boolean isNormalStudent(int studentID) {
         StudentList.StudentNode student = studentList.findStudent(studentID);
         if (student == null) {
