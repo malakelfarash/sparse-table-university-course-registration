@@ -5,13 +5,10 @@ import java.util.Scanner;
 public class DSA {
 
     public static void main(String[] args) {
-        // إنشاء SystemManager
         SystemManager systemManager = new SystemManager();
 
-        // إنشاء كائن Scanner لقراءة المدخلات من المستخدم
         Scanner scanner = new Scanner(System.in);
 
-        // عرض القائمة للمستخدم
         while (true) {
             System.out.println("\n-- System Menu --");
             System.out.println("1. Add Student");
@@ -37,13 +34,13 @@ public class DSA {
                 case 1:
                     System.out.print("Enter Student ID to add: ");
                     int studentIdToAdd = scanner.nextInt();
-                    systemManager.addStudent(studentIdToAdd);  // إضافة طالب
+                    systemManager.addStudent(studentIdToAdd);
                     break;
 
                 case 2:
                     System.out.print("Enter Student ID to remove: ");
                     int studentIdToRemove = scanner.nextInt();
-                    systemManager.removeStudent(studentIdToRemove);  // إزالة طالب
+                    systemManager.removeStudent(studentIdToRemove);
                     break;
 
                 case 3:
@@ -63,7 +60,7 @@ public class DSA {
                     int studentIdEnroll = scanner.nextInt();
                     System.out.print("Enter Course ID to enroll: ");
                     int courseIdEnroll = scanner.nextInt();
-                    systemManager.enrollStudent(studentIdEnroll, courseIdEnroll);  // تسجيل طالب في كورس
+                    systemManager.enrollStudent(studentIdEnroll, courseIdEnroll);
                     break;
 
                 case 6:
@@ -71,15 +68,15 @@ public class DSA {
                     int studentIdRemove = scanner.nextInt();
                     System.out.print("Enter Course ID to remove from: ");
                     int courseIdRemove = scanner.nextInt();
-                    systemManager.removeEnrollment(studentIdRemove, courseIdRemove);  // إزالة طالب من كورس
+                    systemManager.removeEnrollment(studentIdRemove, courseIdRemove);
                     break;
 
                 case 7:
-                    systemManager.undo();  // تنفيذ Undo
+                    systemManager.undo();
                     break;
 
                 case 8:
-                    systemManager.redo();  // تنفيذ Redo
+                    systemManager.redo();
                     break;
 
                 case 9:
