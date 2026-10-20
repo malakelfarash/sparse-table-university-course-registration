@@ -110,7 +110,7 @@ public class CourseList {
         System.out.println("Course with id " + id + " has been removed from the system.");
     }
 
-    //get the first course (Used in system manager to remove student from courses)
+    // get the first course (Used in system manager to remove student from courses)
     public CourseNode getfirstcourse() {
         return head;
     }
@@ -137,7 +137,7 @@ public class CourseList {
     public void sortStudentsByID(int courseID) {
         CourseNode HeadCourse = head;
 
-        // findinf required course by id
+        // find required course by id
         while (HeadCourse != null && HeadCourse.id != courseID) {
             HeadCourse = HeadCourse.next;
         }
