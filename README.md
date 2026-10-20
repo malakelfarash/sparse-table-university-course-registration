@@ -1,6 +1,6 @@
-# Sparse Table University Course Registration (Java)
+# Sparse Table University Course Registration (Java DSA Project)
 
-A Java-based console application that manages university course registrations using a custom **sparse table** implemented via linked lists. This project demonstrates how to efficiently store and retrieve non-empty student-course relationships without relying on memory-heavy 2D arrays.
+A Java-based console application that manages university course registrations using a custom **sparse table** implemented via linked lists. This project was built for a **Data Structures & Algorithms (DSA)** course and demonstrates how to efficiently store and retrieve non-empty student-course relationships without relying on memory-heavy 2D arrays.
 
 ## Features
 
@@ -14,11 +14,14 @@ A Java-based console application that manages university course registrations us
   - Sort courses for a student by ID.
 - **Bonus Feature: Undo/Redo:** Uses two Stacks (`undoStack` and `redoStack`) to allow users to undo or redo their latest actions (adds, removes, enrollments).
 
-## Tech Stack
+## Tech Stack & Concepts
 
 - **Language:** Java (JDK 8+)
-- **Data Structures:** Custom Doubly Linked Lists, Singly Linked Lists, Stacks (`java.util.Stack`)
-- **Concepts:** Object-Oriented Programming, Pointer manipulation, Time/Space Complexity optimization.
+- **Data Structures & Algorithms:** 
+  - Custom Doubly Linked Lists & Singly Linked Lists (Pointer manipulation).
+  - Stacks (`java.util.Stack`) for the Undo/Redo state management.
+  - Bubble Sort algorithm implemented on a custom Linked List.
+- **Concepts:** Object-Oriented Programming, Time/Space Complexity optimization.
 
 ## Getting Started
 
