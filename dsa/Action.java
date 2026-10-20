@@ -2,7 +2,7 @@ package dsa;
 
 public class Action {
 
-    String type;       // نوع العملية (مثلاً: "addStudent")
+    String type;
     int studentid;
     int courseid;
 
