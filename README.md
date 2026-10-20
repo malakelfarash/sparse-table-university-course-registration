@@ -1,4 +1,4 @@
-# Sparse Table University Course Registration (Java DSA Project)
+# Sparse Table University Course Registration (Java)
 
 A Java-based console application that manages university course registrations using a custom **sparse table** implemented via linked lists. This project was built for a **Data Structures & Algorithms (DSA)** course and demonstrates how to efficiently store and retrieve non-empty student-course relationships without relying on memory-heavy 2D arrays.
 
